@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='currency_code') Currency Code:
+      input#currency_code.form-control(type='text', placeholder='Currency Code' name='currency_code' required='true' value=(undefined===currencytype ? '' : currencytype.currency_code) )
+    div.form-group
+      label(for='currency_name') Currency Name:
+      input#currency_name.form-control(type='text', placeholder='Currency Name' name='currency_name' required='true' value=(undefined===currencytype ? '' : currencytype.currency_name))
+    button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

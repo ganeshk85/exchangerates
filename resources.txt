@@ -1,0 +1,40 @@
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+
+Good article for building Vue frontend with node API backend
+https://codeburst.io/building-a-budget-manager-with-vue-js-and-node-js-part-i-f3d7311822a8
+
+https://codeburst.io/using-mongoose-validation-with-async-await-c3a9255459e1
+
+Installing Mongodb on Cloud9 server
+https://community.c9.io/t/setting-up-mongodb/1717
+
+How to query Mongodb using Mongoose
+https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
+
+https://codeburst.io/25-node-js-tutorials-1db3b1da0260
+
+
+first record in currencytype
+http://exchangerates-gkhandare.c9users.io:8080/currencytype/5aaadf957d503f1d4d6c8146
+
+first record in exchangerate which references the above first currencytype
+http://exchangerates-gkhandare.c9users.io:8080/exchangerate/5aaae0847d503f1d4d6c8147
+
+YouTube video - MEAN Stack Front to Back - Traversy Media
+https://www.youtube.com/watch?v=1ZeDy2QI3OE&index=3&list=PLillGF-RfqbZMNtaOXJQiDebNXjVapWPZ
+
+Reactive Forms
+https://www.youtube.com/watch?v=VbVQR4pawQc
+
+
+start the server
+DEBUG=exchangerates:* npm run devstart
+
+start the mongodb
+./mongod
+
+start the angular
+ng serve --port 8081 --host $IP --disable-host-check
+
+mongodb console
+mongo

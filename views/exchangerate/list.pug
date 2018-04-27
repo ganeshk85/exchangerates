@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1= title
+  
+  ul(class='list-group')
+  each exchangerate in exchangerate_list
+    li(class='list-group-item')
+      p #{exchangerate.date_recorded_formatted} - 
+        a(href=exchangerate.url) #{exchangerate.rate}
+        |  (#{exchangerate.currency_type.currency_code})
+
+  else
+    li There are no exchange rates stored.

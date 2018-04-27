@@ -1,0 +1,11 @@
+RxJS Quick Start With 20 Practical Examples
+https://angularfirebase.com/lessons/rxjs-quickstart-with-20-examples/
+
+Different ways for Sharing Data between Components in Angular
+https://www.youtube.com/watch?v=I317BhehZKM
+
+Angular 4 Tutorial for Beginners: Learn Angular 4 from Scratch
+https://www.youtube.com/watch?v=k5E2AVpwsko
+
+Angular 4 in 60 minutes - services subscribe command at 53:58
+https://www.youtube.com/watch?v=KhzGSHNhnbI

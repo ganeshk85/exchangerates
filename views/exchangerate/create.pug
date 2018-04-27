@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='rate') Rate:
+      input#rate.form-control(type='text', placeholder='Rate' name='rate' required='true' value=(undefined===exchangerate ? '' : exchangerate.rate) )
+    div.form-group
+      label(for='currency_type') Currency Type:
+      select#currency_type.form-control(type='select', placeholder='Select Currency Type' name='currency_type' required='true' )
+        for currency_type in currencytypes
+          if exchangerate
+            option(value=currency_type._id selected=(currency_type._id.toString()==exchangerate.currency_type ? 'selected' : false) ) #{currency_type.currency_code}
+          else
+            option(value=currency_type._id) #{currency_type.currency_code}
+    div.form-group
+      label(for='date_recorded') Date Recorded:
+      input#date_recorded.form-control(type='date', name='date_recorded', value=(undefined===exchangerate ? '' : exchangerate.date_recorded) )
+    button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
