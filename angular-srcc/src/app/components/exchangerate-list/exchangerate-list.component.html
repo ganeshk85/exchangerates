@@ -1,0 +1,21 @@
+<h3 *ngIf="isLoading"><i>Loading rates ... </i></h3>
+<h3 *ngIf="!isLoading">Get Current Rates:</h3>
+
+<button (click) = "getExchangeRates()" class="btn btn-primary">Get Rates</button>
+
+<table class="table" *ngIf="exchangerates.length">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Currency</th>
+      <th scope="col">Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let exchangerate of exchangerates">
+      <td>{{exchangerate.date_recorded | date:'dd-MM-yyyy' }}</td>
+      <td>{{exchangerate.currency_type.currency_code}}</td>
+      <td>{{exchangerate.rate}}</td>
+    </tr>
+  </tbody>
+</table>

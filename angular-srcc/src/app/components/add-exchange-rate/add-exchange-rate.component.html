@@ -1,0 +1,30 @@
+<h3>Add New Exchange Rate</h3>
+<form [formGroup]="rateForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="center-block">Date Recorded:
+          <!--<input class="form-control" formControlName="date_recorded">-->
+          <input class="form-control" type="date" placeholder="Required" formControlName="date_recorded">
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Current Type:
+          <select class="form-control" formControlName="currency_type">
+              <option *ngFor="let currency_type of currency_types" [value]="currency_type._id">{{currency_type.currency_name}}</option>
+          </select>
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Rate:
+          <input class="form-control" formControlName="rate">
+        </label>
+    </div>
+    
+    <div style="margin-bottom: 1em">
+      <button type="submit"
+              [disabled]="rateForm.pristine" class="btn btn-success">Save</button> &nbsp;
+      <button type="button" (click)="revert()"
+              [disabled]="rateForm.pristine" class="btn btn-danger">Revert</button>
+    </div>
+</form>
+<p>Form value: {{ rateForm.value | json }}</p>
+<p>Form status: {{ rateForm.status | json }}</p>
